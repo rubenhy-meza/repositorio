@@ -1,0 +1,198 @@
+.cuerpo{
+	width: 900px;
+	margin: auto;	
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+	}
+.c1{
+	
+	width:100%;
+	background: #5b7989;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.c1 h1{
+	margin: 20px;
+	text-align:left;
+	text-shadow:2px 2px 2px #02010a;
+}
+
+img{
+	border: solid 2px #02010a;
+}
+.c1 a{
+text-decoration:none;
+margin: 10px;
+color:white;
+}
+nav{
+	text-align:right;
+}
+.c2{ width: 100%;
+	background: #82c3a6;
+	text-align: center;
+}
+.c2 img{
+	margin: 10px;
+	border: solid 2px #02010a;
+}
+.c3,.paisajes,.retratos{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background: #d5c75f;	
+}
+.c3  >div {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	width: 50%;
+}
+.retratos div{
+	margin:auto; 
+}
+.pie{
+	display: flex;
+	flex-direction: row;
+    background:#C6d5c5; 
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+.pie a{
+	text-decoration: none;
+}
+#redes img{
+	border:none;
+}
+/* para tabletas - telefonos: */
+@media only screen and (max-width: 900px) {
+        .cuerpo{
+        	width: 100%;
+        }
+
+    	.c1  h1,nav{
+	      text-align: center;
+	      margin: auto;
+         }
+        .c1{width: 100%;
+        	margin: auto;
+         }
+        .c2{
+        	width: 100%;}
+        .c2 img{
+         width: 80%;
+         margin:10%;
+          }	
+        .c3,.paisajes,.retratos {
+        	width: 100%;
+        	margin: auto;
+        	display: flex;
+	        flex-direction:column;
+         }
+         .c3 div{
+         width: 80%;
+         margin:auto;
+          }
+         .c3 img{
+         width: 100%;
+         margin:auto;
+          }
+        
+         .c3 > div{
+         	margin:auto;
+         	text-align: center;
+         }
+         .pie{
+         	width: 100%;
+         	display: flex;
+	        flex-direction:column;
+         } 
+         .pie div{width: 100%;
+         	text-align: center;
+         	margin: auto;
+         }
+         }
+
+         /* animacion de imagenes index: */
+@keyframes imagen2-animacion{
+	from{
+	transform-origin: none;
+	}
+	to{
+	transform: rotate(10deg);
+	}
+}
+@keyframes imagen3-animacion{
+	0%{
+		position: relative;
+		top: 0px;
+	    left :0px;
+	}
+	50%{
+		position: relative;
+		top:5px;
+		left:20px;
+	}
+	100%{
+		position: relative;
+		top:0px;
+		left: 0px;
+	}
+}
+#columna1 img:hover{
+	animation-name: imagen2-animacion;
+	animation-duration: 2s;  
+	border: solid 2px;
+	box-shadow: 5px, 5px,#82c3a6;
+}
+#columna2 img:hover{
+   animation-name: imagen3-animacion;
+    animation-duration: 2s;
+   border: solid 2px;
+   box-shadow: 5px, 5px,#82c3a6;
+}
+.pie div{
+	width: 25%;
+	margin: auto;
+}
+.paisajes img{
+	margin: 10%;
+	width: 80%;
+}
+.retratos img{
+	margin: 10%;
+	width: 80%;
+}
+#paisajes1{
+	filter: blur(10px);
+}
+#paisajes2,#paisajes3,#paisajes6{
+	filter: grayscale(100%);
+}
+#paisajes5{
+	filter: sepia(90%);
+}
+/*animacion header*/
+@keyframes header-animacion{
+	0%{
+		position: relative;
+		margin-top: 150%;
+	   
+	}
+	60%{
+		position: relative;
+		margin-top: -5%;
+	}
+	100%{
+		position: relative;
+		margin-top: 0%;
+	}
+}
+header{
+	animation-name: header-animacion;
+	animation-duration: 1s;  
+	
+}

@@ -17,7 +17,6 @@
 	text-align:left;
 	text-shadow:2px 2px 2px #02010a;
 }
-
 img{
 	border: solid 2px #02010a;
 }
@@ -166,6 +165,7 @@ nav{
 	margin: 10%;
 	width: 80%;
 }
+/*filtros de imagenes*/
 #paisajes1{
 	filter: blur(10px);
 }

@@ -153,10 +153,30 @@ multiplica.addEventListener("click",function(){
 	op="no";
 var isSign = false;
 var contardigitos=0;
- function leernumero(n){
+function numero(numero){
+              if (x=="0" || xi==1  ) {	// inicializar un número, 
+				  display.innerHTML=numero; //mostrar en pantalla
+				  x=numero; //guardar número
+				  if (numero==".") { //si escribimos una coma al principio del número
+				   display.innerHTML="0."; //escribimos 0.
+				   x=numero; //guardar número
+				   coma=1; //cambiar estado de la coma
+				   }
+			     }
+			   else { //continuar escribiendo un número
+				     if(display.innerHTML == "0"){ //si pantalla esta cero 
+                          display.innerHTML = ""; //no escribimos nada
+                      }
+				     if(display.innerHTML.length >= 8){}//contanos 8 decimales en display
+				       //Resto de casos: escribir un número del 0 al 9: 	 
+				     else {
+					   display.innerHTML+=numero; 
+					   x+=numero
+				        }
+				    }
+				xi=0
+}
 
- 	
- }
 function borrar(e) {
 			 display.innerHTML="0"; //poner pantalla a 0
 			 x="0"; //reiniciar número en pantalla

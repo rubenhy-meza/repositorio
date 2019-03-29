@@ -21,17 +21,21 @@ var calculadora = {
 var raiz = document.getElementById('raiz')
 var borrar = document.getElementById('on')
  var sign = document.getElementById('sign')	
-
+ //funciones oyentes
+multiplica.addEventListener("click",function(){
+	self.operar("*")})
  multiplica.addEventListener("mousedown",function(){
 	multiplica.setAttribute("style","transform:scale(0.95, 0.95")})
 multiplica.addEventListener("mouseout",function(){
 	multiplica.setAttribute("style","transform:scale(1, 1")})
+
 igual.addEventListener("click",function(){
 	self.igual()})
 igual.addEventListener("mousedown",function(){
 	igual.setAttribute("style","transform:scale(0.95, 0.95")})
 igual.addEventListener("mouseout",function(){
 	igual.setAttribute("style","transform:scale(1, 1")})
+
 punto.addEventListener("click",function(){
 	self.numero(".")})
 punto.addEventListener("mousedown",function(){
@@ -44,19 +48,21 @@ raiz.addEventListener("mousedown",function(){
 	raiz.setAttribute("style","transform:scale(0.95, 0.95")})
 raiz.addEventListener("mouseout",function(){
 	raiz.setAttribute("style","transform:scale(1, 1")})
+
 borrar.addEventListener("click",function(){
 	self.borrar("")})
 borrar.addEventListener("mousedown",function(){
 	borrar.setAttribute("style","transform:scale(0.95, 0.95")})
 borrar.addEventListener("mouseout",function(){
 	borrar.setAttribute("style","transform:scale(1, 1")})
+
 sign.addEventListener("click",function(){
 	self.sign()})
 sign.addEventListener("mousedown",function(){
 	sign.setAttribute("style","transform:scale(0.95, 0.95")})
 sign.addEventListener("mouseout",function(){
 	sign.setAttribute("style","transform:scale(1, 1")})
- 	// funciones
+ 	
 cero.addEventListener("click",function(){
 	self.numero("0")})
 cero.addEventListener("mousedown",function(){
@@ -139,20 +145,18 @@ divicion.addEventListener("mousedown",function(){
 	divicion.setAttribute("style","transform:scale(0.95, 0.95")})
 divicion.addEventListener("mouseout",function(){
 	divicion.setAttribute("style","transform:scale(1, 1")})
-multiplica.addEventListener("click",function(){
-	self.operar("*")})
+}
 }
 
- }
 
-
-    x="0"; //número en pantalla
-	xi=1; //iniciar número en pantalla: 1=si; 0=no;
-	coma=0; //estado punto decimal 0=no, 1=si;
-	ni=0; //número oculto o en espera.
-	op="no";
+var x="0"; //número en pantalla
+var	xi=1; //iniciar número en pantalla: 1=si; 0=no;
+var	coma=0; //estado punto decimal 0=no, 1=si;
+var	ni=0; //número oculto o en espera.
+var	op="no";
 var isSign = false;
 var contardigitos=0;
+
 function numero(numero){
               if (x=="0" || xi==1  ) {	// inicializar un número, 
 				  display.innerHTML=numero; //mostrar en pantalla
@@ -226,13 +230,24 @@ function raiz() {
 			 var y=String(x)
                  contardigitos=y.length
                  if (contardigitos>=8) {
-                   display.innerHTML=x.toFixed(6)
+                 	
+                  // display.innerHTML=x.toFixed(6)
+                   display.innerHTML=y.substring(0,8)
                  }else{
                 display.innerHTML=x;//mostramos la soludi}
 				 }
+				 
+				// limitardigito(this,8);
+				  
 			 op="no"; //quitar operaciones pendientes.
 			 xi=1; //se puede reiniciar la pantalla 
 			 }
+
+function limitardigito(display,max){
+	var y=String(display)
+   contardigitos=y.length
+if(y.value.length>=max){y.value=y.value.substring(0,max);}
+}
 
 
 calculadora.init();

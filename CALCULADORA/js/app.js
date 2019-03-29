@@ -191,7 +191,48 @@ function operar(s) {
 			 op=s; //guardamos tipo de operación.
 			 xi=1; //inicializar pantalla.
 			 }
-
+function igual() {
+			 if (op=="no") { //no hay ninguna operación pendiente.
+				display.innerHTML="";	//mostramos el mismo número	
+				}
+			 else { //con operación pendiente resolvemos
+				sl=ni+op+x; // escribimos la operación en una cadena
+				
+				sol=eval(sl) //convertimos la cadena a código y resolvemos
+				var y=String(sol)
+                 contardigitos=y.length
+                 if (contardigitos>=8) {
+                   display.innerHTML=sol.toFixed(6)
+               }
+				else{
+                display.innerHTML=sol//mostramos la soludi}
+				 }
+				x=sol; //guardamos la solución
+				op="no"; //ya no hayn operaciones pendientes
+				xi=1; //se puede reiniciar la pantalla.
+				}	
+			}
+function sign(){
+          isSign = !isSign;
+          if(isSign && display.innerHTML!="0"){
+            display.innerHTML = "-" + display.innerHTML;
+          }else{
+          display.innerHTML =x;
+          display.innerHTML.slice(1);
+              }
+			}
+function raiz() {
+			 x=Math.sqrt(x) //resolver raíz cuadrada.
+			 var y=String(x)
+                 contardigitos=y.length
+                 if (contardigitos>=8) {
+                   display.innerHTML=x.toFixed(6)
+                 }else{
+                display.innerHTML=x;//mostramos la soludi}
+				 }
+			 op="no"; //quitar operaciones pendientes.
+			 xi=1; //se puede reiniciar la pantalla 
+			 }
 
 
 calculadora.init();

@@ -21,6 +21,41 @@ var calculadora = {
 var raiz = document.getElementById('raiz')
 var borrar = document.getElementById('on')
  var sign = document.getElementById('sign')	
+
+ multiplica.addEventListener("mousedown",function(){
+	multiplica.setAttribute("style","transform:scale(0.95, 0.95")})
+multiplica.addEventListener("mouseout",function(){
+	multiplica.setAttribute("style","transform:scale(1, 1")})
+igual.addEventListener("click",function(){
+	self.igual()})
+igual.addEventListener("mousedown",function(){
+	igual.setAttribute("style","transform:scale(0.95, 0.95")})
+igual.addEventListener("mouseout",function(){
+	igual.setAttribute("style","transform:scale(1, 1")})
+punto.addEventListener("click",function(){
+	self.numero(".")})
+punto.addEventListener("mousedown",function(){
+	punto.setAttribute("style","transform:scale(0.95, 0.95")})
+punto.addEventListener("mouseout",function(){
+	punto.setAttribute("style","transform:scale(1, 1")})
+raiz.addEventListener("click",function(){
+	self.raiz()})
+raiz.addEventListener("mousedown",function(){
+	raiz.setAttribute("style","transform:scale(0.95, 0.95")})
+raiz.addEventListener("mouseout",function(){
+	raiz.setAttribute("style","transform:scale(1, 1")})
+borrar.addEventListener("click",function(){
+	self.borrar("")})
+borrar.addEventListener("mousedown",function(){
+	borrar.setAttribute("style","transform:scale(0.95, 0.95")})
+borrar.addEventListener("mouseout",function(){
+	borrar.setAttribute("style","transform:scale(1, 1")})
+sign.addEventListener("click",function(){
+	self.sign()})
+sign.addEventListener("mousedown",function(){
+	sign.setAttribute("style","transform:scale(0.95, 0.95")})
+sign.addEventListener("mouseout",function(){
+	sign.setAttribute("style","transform:scale(1, 1")})
  	// funciones
 cero.addEventListener("click",function(){
 	self.numero("0")})
@@ -118,8 +153,10 @@ multiplica.addEventListener("click",function(){
 	op="no";
 var isSign = false;
 var contardigitos=0;
+ function leernumero(n){
 
-
+ 	
+ }
 function borrar(e) {
 			 display.innerHTML="0"; //poner pantalla a 0
 			 x="0"; //reiniciar número en pantalla

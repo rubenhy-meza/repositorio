@@ -206,7 +206,7 @@ function igual() {
 				var y=String(sol)
                  contardigitos=y.length
                  if (contardigitos>=8) {
-                   display.innerHTML=sol.toFixed(6)
+                   display.innerHTML=y.substring(0,8) //mostramos 8 digitos
                }
 				else{
                 display.innerHTML=sol//mostramos la soludi}
@@ -231,23 +231,12 @@ function raiz() {
                  contardigitos=y.length
                  if (contardigitos>=8) {
                  	
-                  // display.innerHTML=x.toFixed(6)
                    display.innerHTML=y.substring(0,8)
                  }else{
                 display.innerHTML=x;//mostramos la soludi}
-				 }
-				 
-				// limitardigito(this,8);
-				  
+				 }	  
 			 op="no"; //quitar operaciones pendientes.
 			 xi=1; //se puede reiniciar la pantalla 
 			 }
-
-function limitardigito(display,max){
-	var y=String(display)
-   contardigitos=y.length
-if(y.value.length>=max){y.value=y.value.substring(0,max);}
-}
-
 
 calculadora.init();

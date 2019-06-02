@@ -8,14 +8,12 @@ var matriz=0;
 var intervalo=0;
 var eliminar=0;
 var nuevosDulces=0;
-var tiempo=0;
 var indice=0;
 var contadorTotal=0;
 var espera=0;
 var score=0;
 var mov=0;
-var min=2;
-var seg=0;
+
 
 // Inicia Efecto titulo estilos
 
@@ -31,7 +29,7 @@ $(document).ready(function() {
       
 $(".btn-reinicio").click(function(){
 	   if ($('.btn-reinicio').text() == "Iniciar") {
-            var tiempo = 60 * 0.25; //Segundos para el juego
+            var tiempo = 60 * 2; //Segundos para el juego
             startTimer(tiempo, $("#timer"));
             $('.btn-reinicio').text('Reiniciar');
             i=0;
@@ -46,8 +44,6 @@ $(".btn-reinicio").click(function(){
 	clearInterval(eliminar);
 	clearInterval(nuevosDulces);
 	clearInterval(tiempo);
-	min=2;
-	seg=0;
 	borrartotal();
 	intervalo=setInterval(function(){
 		desplazamiento()

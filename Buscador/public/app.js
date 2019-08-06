@@ -14,7 +14,10 @@ $(document).ready(function() {
     init();
     setSearch();
 
-     // makes ajax request to get all or filered data
+
+    // ################### main
+
+    // makes ajax request to get all or filered data
     $('#buscar').click(function() {
         if ($("#checkPersonalizada")[0].checked){
             var valores = $("#rangoPrecio").val();
@@ -35,7 +38,11 @@ $(document).ready(function() {
                 }
             });
     });
-     function renderSelect(data) { 
+
+
+
+    // cleates HTML/Template for '<option>'
+    function renderSelect(data) { 
         // data must be an array ['NY', 'Miami', 'LA']
         var html = '';
         data.forEach(function(key, idx) {
@@ -69,7 +76,8 @@ $(document).ready(function() {
         return html;
     } // .renderCard
 
- function init(){
+    // loads advanced filtering options
+    function init(){
         $.ajax({
             url: 'http://localhost:3000/filteroptions',
             type: 'get',
@@ -85,8 +93,6 @@ $(document).ready(function() {
             }
         });
     } // .init
-
-   
 
     // advance search options class
     function setSearch() {

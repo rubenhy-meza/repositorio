@@ -135,7 +135,7 @@ class EventManager {
             events: eventos,
             eventDragStart: (event,jsEvent) => {
                 $('.delete').find('img').attr('src', "../img/trash-open.png");
-                $('.delete').css('background-color', '#a70f19')
+                $('.delete').css('background-color', '#a70f68')
             },
             eventDragStop: (event,jsEvent) =>{
               var trashEl = $('.delete');

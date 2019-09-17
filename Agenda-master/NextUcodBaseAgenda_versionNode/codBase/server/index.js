@@ -1,4 +1,3 @@
-
 const http = require('http'); //requerir el módulo http
       path = require('path'), //requiere el modulo path para trabajar con directorios
       express = require('express'), //permite el enrutamiento de peticiones.
